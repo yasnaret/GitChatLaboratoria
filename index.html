@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+   
+</head>
+
+<body>
+    <div>
+        <!-- LOGIN -->
+        <div id="loggedIn">
+            <p id="username"></p>
+            <input type="button" id="logout" value="LOGOUT" onclick="logoutWithFirebase()">
+        </div>
+        <!-- AUTENTICACION -->
+        <div id="loggedOut">
+            <input type="email" id="email">
+            <input type="password" id="password">
+            <input type="button" onclick="registerWithFirebase()" id="registerButton" value="Register" >
+            <input type="button" id="loginButton" value="Login" onclick="loginWithFirebase()">
+            <input type="button" onclick="facebookLoginWithFirebase()" id="registerButton" value="Facebook Login" >
+        </div>
+        <div id="gifContainer">
+
+        </div>
+        <div >
+            <input id="gifArea" type="text">
+            <input id ="sendGift"type="button" onclick="sendGif()" value="Send Gif">
+        </div>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyAUmGDCYu-8urKpQnzzTCQJaVw5pXc9bI4",
+            authDomain: "chatimagenes-yas.firebaseapp.com",
+            databaseURL: "https://chatimagenes-yas.firebaseio.com",
+            projectId: "chatimagenes-yas",
+            storageBucket: "chatimagenes-yas.appspot.com",
+            messagingSenderId: "668850883570"
+        };
+        firebase.initializeApp(config);
+    </script>
+     <script src="app.js"></script>
+</body>
+
+</html>
+
